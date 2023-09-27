@@ -1,6 +1,8 @@
+from lib.task import Task
+
 class TaskFormatter:
     def __init__(self, task): # task is an instance of Task
-        pass
+        self.task = task
 
     def format(self):
         # Returns the task formatted as a string.
