@@ -6,12 +6,14 @@ def test_format_incomplete():
     task1 = Mock()
     task1.title = "bagel"
     task1.complete = False
+    formatter = TaskFormatter(task1)
 
-    assert task1.format() == "- [ ] bagel"
+    assert formatter.format() == "- [ ] bagel"
 
 def test_incomplete():
     task2 = Mock()
     task2.title = "hoovering"
     task2.complete = True
+    formatter = TaskFormatter(task2)
 
-    assert task2.format() == "- [x] hoovering"
+    assert formatter.format() == "- [x] hoovering"
